@@ -14,10 +14,16 @@ class ViewController: UIViewController {
     @IBOutlet var green: UILabel!
     @IBOutlet var blue: UILabel!
     
+    @IBOutlet var redSliderValue: UILabel!
+    @IBOutlet var greenSliderValue: UILabel!
+    @IBOutlet var blueSliderValue: UILabel!
     
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +49,16 @@ class ViewController: UIViewController {
         blueSlider.maximumValue = 1
         blueSlider.minimumValue = 0
         blueSlider.tintColor = .blue
+        
+        redSliderValue.text = String(redSlider.value)
+        greenSliderValue.text = String(greenSlider.value)
+        blueSliderValue.text = String(blueSlider.value)
+        redSliderValue.textColor = .white
+        greenSliderValue.textColor = .white
+        blueSliderValue.textColor = .white
+        
+        
+        
         }
     
 

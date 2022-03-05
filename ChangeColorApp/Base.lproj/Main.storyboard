@@ -107,11 +107,14 @@
                     <connections>
                         <outlet property="blue" destination="9hC-Uq-h4N" id="nCU-vh-1tn"/>
                         <outlet property="blueSlider" destination="6AE-Df-SkR" id="e82-si-Au9"/>
+                        <outlet property="blueSliderValue" destination="15s-Rn-BmL" id="uox-EG-WWF"/>
                         <outlet property="green" destination="j0N-Wo-agv" id="IHB-jS-4my"/>
                         <outlet property="greenSlider" destination="GWf-71-Zf4" id="2cM-Eb-fM8"/>
+                        <outlet property="greenSliderValue" destination="8qT-yF-vl9" id="GFO-tr-dmi"/>
                         <outlet property="mainView" destination="gew-YL-Jiv" id="Cb5-Qo-xEW"/>
                         <outlet property="red" destination="JU9-Ua-byB" id="zme-pt-eSb"/>
                         <outlet property="redSlider" destination="zrF-pe-ZG9" id="RkG-4G-fJf"/>
+                        <outlet property="redSliderValue" destination="ijY-Sy-ZD6" id="Ijh-s4-VVF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
