@@ -59,8 +59,21 @@ class ViewController: UIViewController {
         
         
         
-        }
+    }
     
-
+    @IBAction func redSliderAction() {
+        redSliderValue.text = String(format: "%.2f", redSlider.value)
+        
+    }
+    
+    @IBAction func greenSliderAction() {
+        greenSliderValue.text = String(format: "%.2f", greenSlider.value)
+    }
+    
+    @IBAction func blueSliderAction() {
+        blueSliderValue.text = String(format: "%.2f", blueSlider.value)
+    }
+    
+   
 }
 
