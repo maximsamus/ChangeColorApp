@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
     
     @IBOutlet var mainView: UIView!
     
@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet var redTextField: UITextField!
+    @IBOutlet var greenTextField: UITextField!
+    @IBOutlet var blueTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,9 @@ class ViewController: UIViewController {
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
         blueLabel.text = string(from: blueSlider)
+        redTextField.text = string(from: redSlider)
+        greenTextField.text = string(from: greenSlider)
+        blueTextField.text = string(from: blueSlider)
     }
     
     @IBAction func rgbSlider(_ sender: UISlider) {
@@ -41,6 +47,9 @@ class ViewController: UIViewController {
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
         blueLabel.text = string(from: blueSlider)
+        redTextField.text = string(from: redSlider)
+        greenTextField.text = string(from: greenSlider)
+        blueTextField.text = string(from: blueSlider)
     }
     private func setColor() {
         mainView.backgroundColor = UIColor(
@@ -52,5 +61,8 @@ class ViewController: UIViewController {
     }
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
+    }
+    
+    @IBAction func doneButton() {
     }
 }

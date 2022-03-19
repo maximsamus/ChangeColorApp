@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Kpj-Qz-JhH">
             <objects>
-                <viewController id="945-I3-BQZ" sceneMemberID="viewController">
+                <viewController id="945-I3-BQZ" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mjd-Ww-fD0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,10 +31,10 @@
             </objects>
             <point key="canvasLocation" x="207.24637681159422" y="64.955357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChangeColorApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingsViewController" customModule="ChangeColorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,6 +154,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="rDb-h5-59B"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -174,11 +177,14 @@
                     <connections>
                         <outlet property="blueLabel" destination="e2p-G5-qmK" id="cbC-36-KSN"/>
                         <outlet property="blueSlider" destination="kCj-Kc-Nsc" id="aCF-n2-nHg"/>
+                        <outlet property="blueTextField" destination="RfX-cu-M3r" id="aqN-Y4-zeU"/>
                         <outlet property="greenLabel" destination="VhJ-Ht-w0n" id="qgI-X0-Pkt"/>
                         <outlet property="greenSlider" destination="lBV-XB-x0k" id="lkf-3W-3My"/>
+                        <outlet property="greenTextField" destination="P2Y-GC-apw" id="DtB-PH-JwW"/>
                         <outlet property="mainView" destination="gew-YL-Jiv" id="TP8-2M-wjw"/>
                         <outlet property="redLabel" destination="jkB-mx-arO" id="pJK-of-tSq"/>
                         <outlet property="redSlider" destination="1LE-AL-ftz" id="3mh-8X-C39"/>
+                        <outlet property="redTextField" destination="s9K-JU-c9Z" id="J3S-zw-Kix"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
