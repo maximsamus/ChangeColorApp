@@ -33,10 +33,8 @@ class SettingsViewController: UIViewController {
         redSlider.tintColor = .red
         greenSlider.tintColor = .green
         
-        mainView.backgroundColor = mainViewColor
-        
-        setColor()
         setSliders()
+        setColor()
         
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
@@ -58,6 +56,14 @@ class SettingsViewController: UIViewController {
         blueTextField.text = string(from: blueSlider)
     }
     
+    @IBAction func doneButton() {
+        delegate?.setColor(mainView.backgroundColor ?? .black)
+        dismiss(animated: true)
+    }
+} 
+
+// MARK: - Private Methods
+extension SettingsViewController {
     private func setColor() {
         mainView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
@@ -77,9 +83,4 @@ class SettingsViewController: UIViewController {
         greenSlider.value = Float(ciColor.green)
         blueSlider.value = Float(ciColor.blue)
     }
-    
-    @IBAction func doneButton() {
-        delegate?.setColor(mainView.backgroundColor ?? .black)
-        dismiss(animated: true)
-    }
-} 
+}
