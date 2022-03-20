@@ -71,8 +71,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func doneButton() {
-        dismiss(animated: true)
         delegate?.setColor(mainView.backgroundColor ?? .black)
+        dismiss(animated: true)
     }
-}
-
+} 

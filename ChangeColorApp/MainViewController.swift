@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
-////        view.backgroundColor = setColor()
+//     view.backgroundColor = setColor()
 //    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
