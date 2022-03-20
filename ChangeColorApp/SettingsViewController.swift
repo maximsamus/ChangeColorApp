@@ -23,12 +23,17 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenTextField: UITextField!
     @IBOutlet var blueTextField: UITextField!
     
+    var mainViewColor: UIColor!
+    var delegate: SettingsViewControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mainView.layer.cornerRadius = 10
         
         redSlider.tintColor = .red
         greenSlider.tintColor = .green
+        
+        mainView.backgroundColor = mainViewColor
         
         setColor()
         
@@ -51,6 +56,7 @@ class SettingsViewController: UIViewController {
         greenTextField.text = string(from: greenSlider)
         blueTextField.text = string(from: blueSlider)
     }
+    
     private func setColor() {
         mainView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
@@ -59,10 +65,14 @@ class SettingsViewController: UIViewController {
             alpha: 1
         )
     }
+    
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
     
     @IBAction func doneButton() {
+        dismiss(animated: true)
+        delegate?.setColor(mainView.backgroundColor ?? .black)
     }
 }
+
