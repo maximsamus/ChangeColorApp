@@ -36,6 +36,7 @@ class SettingsViewController: UIViewController {
         mainView.backgroundColor = mainViewColor
         
         setColor()
+        setSliders()
         
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
@@ -68,6 +69,13 @@ class SettingsViewController: UIViewController {
     
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
+    }
+    
+    private func setSliders() {
+        let ciColor = CIColor(color: mainViewColor)
+        redSlider.value = Float(ciColor.red)
+        greenSlider.value = Float(ciColor.green)
+        blueSlider.value = Float(ciColor.blue)
     }
     
     @IBAction func doneButton() {
