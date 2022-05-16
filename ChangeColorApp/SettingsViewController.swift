@@ -35,25 +35,13 @@ class SettingsViewController: UIViewController {
         
         setSliders()
         setColor()
-        
-        redLabel.text = string(from: redSlider)
-        greenLabel.text = string(from: greenSlider)
-        blueLabel.text = string(from: blueSlider)
-        redTextField.text = string(from: redSlider)
-        greenTextField.text = string(from: greenSlider)
-        blueTextField.text = string(from: blueSlider)
+        settings()
     }
     
     @IBAction func rgbSlider(_ sender: UISlider) {
         
         setColor()
-        
-        redLabel.text = string(from: redSlider)
-        greenLabel.text = string(from: greenSlider)
-        blueLabel.text = string(from: blueSlider)
-        redTextField.text = string(from: redSlider)
-        greenTextField.text = string(from: greenSlider)
-        blueTextField.text = string(from: blueSlider)
+        settings()
     }
     
     @IBAction func doneButton() {
@@ -83,4 +71,14 @@ extension SettingsViewController {
         greenSlider.value = Float(ciColor.green)
         blueSlider.value = Float(ciColor.blue)
     }
+    
+    private func settings() {
+        redLabel.text = string(from: redSlider)
+        greenLabel.text = string(from: greenSlider)
+        blueLabel.text = string(from: blueSlider)
+        redTextField.text = string(from: redSlider)
+        greenTextField.text = string(from: greenSlider)
+        blueTextField.text = string(from: blueSlider)
+    }
+    
 }
